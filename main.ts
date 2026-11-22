@@ -11,7 +11,10 @@
 //
 // The program writes that scene, exactly as written below, to
 // /output/entry.txt. It is deterministic: two runs write identical
-// bytes, it reads no input, and it touches no network.
+// bytes, it reads no input, and it touches no network. The file holds
+// exactly the scene with no trailing newline; the gate counts Unicode
+// code points, not bytes (here they coincide: the scene is all ASCII,
+// so 183 code points is also 183 bytes).
 //
 // Local check:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
